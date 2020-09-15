@@ -1,0 +1,25 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.flex-container > div {
+    background-color: #f1f1f1;
+    font-size: 15px;
+    text-align: center;
+}
+
+legend {
+  font-size: medium;
+}
+
+.filter-container > div{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10em;
+}
+
+
+
+
+

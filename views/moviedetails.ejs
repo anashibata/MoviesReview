@@ -1,0 +1,49 @@
+<html>
+<head>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript"> </script> 
+   
+    <title>Movie Page</title>    
+</head> 
+
+<body>
+    <%- include('header') %>
+    <br><br>
+
+    <div class="item1" id="test">
+        <h1 class="center">Title:&nbsp;<%= titleMovie %></h1><br>
+        &nbsp;&nbsp;<image class= "pimage" src="<%= imgMovie %>"<br><br></image>
+        <h1 class ="center">Description:<br><br><%= desMovie %></h1><br>
+        <h1 class="center">Year:&nbsp;<%= yearMovie %></h1><br>
+
+        <input id="userLogged"  style="visibility: hidden;" value=<%= userId %> >
+    </div>
+    <br><br>    
+
+    <h4 class="center">Provide your Rating for this movie, is this a blockbuster or a flop?</h4><br>
+    <div class="stars" id="rating" style="visibility: visible;">  
+    <form action="/movie/ratingMovie" method="post">
+        <input type="text" name="movie" style="visibility: hidden;" value=<%= idMovie %> >
+
+         <input type="radio" name="rating" value="1" checked/>One
+         <input type="radio" name="rating" value="2" checked/>Two
+         <input type="radio" name="rating" value="3" checked/>Three
+         <input type="radio" name="rating" value="4" checked/>Four
+         <input type="radio" name="rating" value="5" checked/>Five
+         <span id="result"></span>
+           
+         <input type="submit" value="Send">
+    </form> 
+    </div><br><br>
+</body>
+<script>
+    if (document.getElementById('userLogged').value === '')
+        document.getElementById('rating').style.visibility='hidden'
+</script>
+<script src="../javascripts/movieDetails.js"></script>
+</html>

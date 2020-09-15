@@ -1,0 +1,27 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+  <%- include('header') %>
+    <div class="main"> 
+        <form action="/signinout" method="post">
+         
+          <label for="femail">E-mail<i class="error" id="femailval" data-errormsg="You have to fill your E-mail" style="visibility: hidden;"></i></label>
+          <input type="text" name="email" id="femail" size="40" autofocus><br><br>
+          
+          <label for="fpassword">Password<i class="error" id="fpasswordval" data-errormsg="You have to fill your Password" style="visibility: hidden;"></i></label>
+          <input type="password" name="password" id="fpassword"  size="40" autofocus><br><br>
+
+          <input type="submit" value="Sign In">
+
+          <br><br><a href="/signup">Need an account? Sign up here.</a>
+        </form> 
+        
+      </div>  
+</body>
+

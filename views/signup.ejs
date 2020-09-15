@@ -1,0 +1,32 @@
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<body>
+  <%- include('header') %>
+    <div class="main"> 
+        <form action="/signup" method="post">
+         
+          <label for="firstname">Name<i class="error" id="firstnameval" data-errormsg="You have to fill your First Name" style="visibility: hidden;"></i></label>
+          <input type="text" name="firstname" id="idfirstname" size="40" autofocus><br><br>
+          
+          <label for="surname">Surname<i class="error" id="surnameval" data-errormsg="You have to fill your Surname" style="visibility: hidden;"></i></label>
+          <input class="text" type="text" name="surname" id="idsurname" size="40" value=''><br><br>
+
+          <label for="email">E-mail<i class="error" id="emailval" data-errormsg="You have to fill your e-mail" style="visibility: hidden;"></i></label>
+          <input type="text" name="email" id="idemail" size="40" value=''><br><br>
+      
+          <label for="password">Password</label>
+          <input type="password" name="password" id="idpassword" size="15" value=''><br><br>
+          
+          <label for="repassword">Re enter your password</label>
+          <input type="password" name="repassword" id="idrepassword" size="15" value=''><br><br>
+                     
+          <input type="submit" value="Sign Up">
+         
+        </form> 
+
+      </div>  
+</body>

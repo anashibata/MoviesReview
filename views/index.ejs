@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">   
+    <link rel='stylesheet' href='../stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/movies.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript"> </script>
+  </head>
+  <body>
+    <%- include('header') %>
+
+    <div classname="filter-container">
+      
+      <label for="fname">Title movie: </label>
+      <input type="text" id="ftitle" size="30" autofocus>
+    
+      <label for="fname">Genre: </label>
+      <select name="cars" id="fgenre">
+        <option value=''></option>
+        <option value=Action>Action</option>
+        <option value=Animation>Animation</option>
+        <option value=Biography>Biography</option>
+        <option value=Comedy>Comedy</option>
+        <option value=Documentary>Documentary</option>
+        <option value=Drama>Drama</option>
+        <option value=Family>Family</option>
+        <option value=Fantasy>Fantasy</option>
+        <option value=History>History</option>
+        <option value=action>Action</option>
+        <option value=Horror>Horror</option>
+        <option value=Musical>Musical</option>
+        <option value=Mystery>Mystery</option>
+        <option value=Romance>Romance</option>
+        <option value=Superhero>Superhero</option>
+        <option value=Thriller>Thriller</option>
+        <option value=War>War</option>
+        <option value=Western>Western</option>
+      </select>
+          
+      <button id="btnfilterMovies">Filter</button>   
+
+      <label for="fusername" id="userName"> Logged User: </label><%= userName %>
+ 
+    </div>
+
+    <div class="flex-container" id="conMovies"> 
+    </div>
+
+  </body>
+  <script src="../javascripts/movies.js"></script>
+</html>
